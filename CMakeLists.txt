@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.9)
 
 # Setup the Scine Xtb Project
 project(Xtb
-  VERSION 3.0.2
+  VERSION 3.0.3
   DESCRIPTION "SCINE XTB Wrapper."
 )
 
@@ -37,6 +37,7 @@ if(NOT TARGET lib-xtb-static)
       GIT_TAG v6.5.1
       QUIET
       UPDATE_DISCONNECTED 1
+      PATCH_COMMAND ${CMAKE_COMMAND} -P ${CMAKE_SOURCE_DIR}/cmake/patch-xtb-mctc-tag.cmake
     )
     add_subdirectory(${xtb_SOURCE_DIR} ${xtb_BINARY_DIR})
     if(TARGET lib-xtb-static)

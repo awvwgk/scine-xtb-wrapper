@@ -1,6 +1,11 @@
 Changelog
 =========
 
+Release 3.0.3
+-------------
+
+- Pin mctc-lib to version 0.5.1
+
 Release 3.0.2
 -------------
 
